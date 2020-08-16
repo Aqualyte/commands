@@ -1,0 +1,117 @@
+1. Installing jenkins in one linux machine
+2. Installing tomcat in one linux machine
+3. How to install plugins to jenkins
+4. How to configure the environment variable and classpath in jenkins global tool configuration.
+
+5. We have created a simple pipeline -- download the code from www.github.com and compiled,built it, and then created .war in the jenkins machine.
+
+6. We have created detailed pipeline - download the code from www.github.com and compiled,build it, and then create .war in the jenkins machine.then we have deployed this .war file into tomcat machine.Then i was able to access my application using the tomcat machine public address http://<tomcat machine public address>:8080/gameoflife. (this approach is virtual machine)
+
+7. for 5 and 6 we have also explored via POLL SCM.through this if i change any code in www.gitihub.com in my repository,the automatically i have seen the complete 5 and 6 points were completed.
+
+8. installing artifactory in one linux machine
+
+9. access artifactory admin console via http://<machine public ip address>:8081/artifactory
+
+user name - admin
+password - password
+
+then you set up the r own password.then create new maven repository
+
+go to jenkins and go to manage jenkins --> configure system --> go to the artifactory section and first add the artifactory using password or ssh key and test it.It should be a success.
+
+
+then create a detailed pipeline --> now you also add the artifactory section and select which repository you want to upload the source code after build and deployment.
+
+now go to your artifactory console and try to ensure the repository code is available.
+
+10. create your own slack channel .go tat channel and add an app --> choose incoming webhooks --> create the secret key url...
+
+you need to install slack plugin in jenkins.
+
+
+come to jenkins --> configure system --> go to slack section --> you add the slack channel and test it (use the secret key)
+
+create detailed pipeline - download the code from www.github.com and compiled,build it, and then create .war in the jenkins machine.then we have deployed this .war file into tomcat machine.Then i was able to access my application using the tomcat machine public address http://<tomcat machine public address>:8080/gameoflife. (this approach is virtual machine)
+
+
+also in this pipeline you add the slack notifications and run the build .Then you go to slack channel and check the alerts.
+
+
+11. We have created a Jenkins machine and we have also created one more linux machine.
+
+configure all packages and class paths .
+
+Then add the new machine in the jenkins console and install agent first.
+
+create a detailed pipeline - Choose the new machine to do all the below tasks.
+
+download the code from www.github.com. and compiled,build it, and then create .war in the jenkins machine.then we have deployed this .war file into tomcat machine.Then i was able to access my application using the tomcat machine public address http://<tomcat machine public address>:8080/gameoflife. (this approach is virtual machine)
+
+
+12.Assume we have an AWS account and via IAM we have created an Access key and Secret access keys.
+
+go to jenkins and install ec2 plugin in the jenkins.
+
+then come to jenkins --> configure system --> go to aws --> configure AWS account into jenkins.
+
+now create a new pipeline and give AWS cli and enable it.If you run the build now you can see the new instances getting created in AWS .
+
+
+13.we have created 2 linux machines.
+
+installed git in both machines
+
+created git shared repository in one linux machine coz this linux machine i am going to assume git server (private in my Datacenter)
+
+in the machine 1 itself create new user and download the git repo and push some changes
+
+
+in the same machine1 itself create 2nd user and first clone it and pull the current changes then push some changes
+
+now from each user if you pull the changes you can see one user can get the other user changes .because this repository is shared common repository
+
+now go to another linux machine and do the same git clone and push with one changes.git pull will also help to get the others changes.
+
+
+14. we create one linux machine and installed docker and played some basic docker commands
+
+how to search it
+how to download any image from docker.io (hub.docker.com)
+
+how to launch container from the downloaded image
+
+how to see the exited and up container difference.
+
+then how to remove the image
+
+then how to remove forcibly the image
+then how to remove container
+
+how to logging container temporarily
+
+how to log into the container permanently.
+
+how to remove entire not running container fully
+
+how to launch containers with persistent storage and with exposed to local machine mapped ports.
+
+
+15. how to create sample Jenkinsfile via snippet generator and via available templates.
+
+16. keep the Jenkinsfile in your code repo in github itself and now test via pipeline in jenkins
+
+17. now create jenkins machine and create docker machine.
+
+created a detailed pipeline - download the code from www.github.com and compiled,build it, and then create .war in the jenkins server. This .war file should be copied to docker machine (ensure docker machine is already associated to jenkins via publish over ssh plugin configure system and test it).Ensure the .war file is getting copied to  the respecting user login and you also ensure where you kept the Dockerfile and then you execute the pipeline.
+
+Now you simple access the application via the docker machine ip address with application uri
+
+18. If you have not seen any plugin in jenkins then request the custom plugin from  the vendor and it will look like .hpi formaat and then you can go to the plugin section in jenkins and install it.
+
+19. If you need mailing then ensure in the configure system section you can send test mails.Then in any pipeline you can add that mail section too.
+
+
+20. go to jhipster(if you really don't know any developer but you want to learn from the code).use this jhipster and create your own application and push it to github and use this for your pipeline
+
+
